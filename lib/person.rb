@@ -3,6 +3,6 @@ class Person
                 :t_shirt_size, :wrist_size, :glove_size, :pant_length, :pant_width
 
   def initialize(attrs)
-    attrs.each { |k, v| self.send k, v }
+    attrs.each { |k, v| self.send("#{k}=", v) }
   end
 end
